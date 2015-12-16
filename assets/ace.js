@@ -13,6 +13,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
             var editor = ace.edit(id);
             editor.setTheme('ace/theme/chrome');
             editor.setOptions({
+                autoScrollEditorIntoView: true,
                 maxLines: 100
             });
 
