@@ -8,6 +8,7 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.0 Releases:
+    * **0.0.5**: Include pull requests from github, fixing scrolling.
     * **0.0.4**: Fixed syntax error in code.
     * **0.0.3**: Added option to disable syntax validation.
     * **0.0.2**: Added .pdf, .epub, .emobi format export support.
