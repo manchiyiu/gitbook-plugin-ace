@@ -7,6 +7,9 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 
 ## Changelog
 
+* 0.1 Releases:
+    * **0.1.0**: Updated to latest version of ace (added Swift and JSX syntax support).
+
 * 0.0 Releases:
     * **0.0.5**: Include pull requests from github, fixing scrolling.
     * **0.0.4**: Fixed syntax error in code.
