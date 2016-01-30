@@ -20,7 +20,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
             if (config.edit === false)
                 editor.setReadOnly(true);
 
-            if (config.theme === false)
+            if (config.theme === undefined)
                 editor.setTheme('ace/theme/chrome');
             else
                 editor.setTheme('ace/theme/' + config.theme);
@@ -32,26 +32,6 @@ require(["gitbook", "jquery"], function(gitbook, $) {
                 editor.getSession().setMode('ace/mode/' + config.lang);
             else
                 editor.getSession().setMode('ace/mode/c_cpp'); //default to c language
-
-            // handler for dark theme
-            $aceParent = $(this);
-            setTimeout(function() {
-                if ($('.book').hasClass('color-theme-2')) {
-                    $aceParent.addClass('dark');
-                    editor.setTheme('ace/theme/vibrant_ink');
-                }
-            }, 1);
-
-            $('#color-theme-preview-0, #color-theme-preview-1').click(function() {
-                $aceParent.removeClass('dark');
-                editor.setTheme('ace/theme/chrome');
-            });
-
-            $('#color-theme-preview-2').click(function() {
-                if (!$aceParent.hasClass('dark'))
-                    $aceParent.addClass('dark');
-                editor.setTheme('ace/theme/vibrant_ink');
-            });
         });
     };
 

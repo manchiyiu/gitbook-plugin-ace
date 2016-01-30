@@ -8,6 +8,7 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.1 Releases:
+    * **0.1.2**: Removed dark theme logic, fix theme error.
     * **0.1.1**: Added custom theme parameter.
     * **0.1.0**: Updated to latest version of ace (added Swift and JSX syntax support).
 
