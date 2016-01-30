@@ -11,7 +11,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
             $ace.attr('id', id);
 
             var editor = ace.edit(id);
-            editor.setTheme('ace/theme/chrome');
+
             editor.setOptions({
                 autoScrollEditorIntoView: true,
                 maxLines: 100
@@ -19,6 +19,11 @@ require(["gitbook", "jquery"], function(gitbook, $) {
 
             if (config.edit === false)
                 editor.setReadOnly(true);
+
+            if (config.theme === false)
+                editor.setTheme('ace/theme/chrome');
+            else
+                editor.setTheme('ace/theme/' + config.theme);
 
             if (config.check === false)
                 editor.session.setOption("useWorker", false);

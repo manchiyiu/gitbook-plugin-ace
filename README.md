@@ -8,6 +8,7 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.1 Releases:
+    * **0.1.1**: Added custom theme parameter.
     * **0.1.0**: Updated to latest version of ace (added Swift and JSX syntax support).
 
 * 0.0 Releases:
@@ -40,4 +41,9 @@ int main(){
     * mode_java.js ----> java
     * ...
 
-* '''check```: if this is set to false, syntax validation will be disabled.
+* ```check```: if this is set to false, syntax validation will be disabled.
+
+* ```theme```: the theme for the editor, the default is 'chrome'.
+    * monokai
+    * coffee
+    * ...

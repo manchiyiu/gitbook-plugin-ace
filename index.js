@@ -20,7 +20,8 @@ module.exports = {
                 var config = {
                   edit: blk.kwargs.edit,
                   lang: blk.kwargs.lang,
-                  check: blk.kwargs.check
+                  check: blk.kwargs.check,
+                  theme: blk.kwargs.theme
                 };
                 return '<div class="ace"><div class="aceCode" data-config='+JSON.stringify(config)+'>'+escape(blk.body.trim())+'<br></div></div>';
               } else {
