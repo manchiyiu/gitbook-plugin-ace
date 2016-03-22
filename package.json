@@ -16,6 +16,7 @@
     "url": "https://github.com/ymcatar/gitbook-plugin-ace/issues"
   },
   "dependencies": {
+    "highlight.js": "^9.2.0",
     "html-escape": "^1.0.2"
   }
 }

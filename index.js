@@ -1,4 +1,9 @@
 var escape = require('html-escape');
+var highlight = require('highlight.js');
+
+var map = {
+	c_cpp: 'c'
+};
 
 module.exports = {
 
@@ -10,6 +15,13 @@ module.exports = {
 		js: [
 			"ace/ace.js",
 			"ace.js"
+		]
+	},
+
+	ebook: {
+		assets: "./assets",
+		css: [
+			"pdf.css"
 		]
 	},
 
@@ -26,7 +38,13 @@ module.exports = {
 					return '<div class="ace"><div class="aceCode" data-config=' + JSON.stringify(config) + '>' + escape(blk.body.trim()) + '<br></div></div>';
 				} else {
 					var body = blk.body.trim();
-					return '<pre>' + escape(body) + '</pre>';
+
+					var lang = blk.kwargs.lang;
+					lang = map[lang] || lang.toLowerCase();
+
+					var content = highlight.highlight(lang, body).value;
+					content = '<div class="aceCode">' + content + '</div>';
+					return content;
 				}
 			}
 		}
