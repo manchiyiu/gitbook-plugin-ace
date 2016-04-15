@@ -7,6 +7,9 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 
 ## Changelog
 
+* 0.2 Releases:
+    * **0.2.0**: Added experimental support for pdf syntax highlight, please open issues for languages that are not working for you.
+
 * 0.1 Releases:
     * **0.1.2**: Removed dark theme logic, fix theme error.
     * **0.1.1**: Added custom theme parameter.

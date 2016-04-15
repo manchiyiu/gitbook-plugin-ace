@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-ace",
   "description": "Ace, code editor plugin for GitBook",
   "main": "index.js",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "engines": {
     "gitbook": ">=2.x.x"
   },
@@ -16,7 +16,7 @@
     "url": "https://github.com/ymcatar/gitbook-plugin-ace/issues"
   },
   "dependencies": {
-    "highlight.js": "^9.2.0",
+    "highlight.js": "^9.3.0",
     "html-escape": "^1.0.2"
   }
 }

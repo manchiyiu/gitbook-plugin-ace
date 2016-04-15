@@ -1,8 +1,9 @@
 var escape = require('html-escape');
-var highlight = require('highlight.js');
+var hljs = require('highlight.js');
+
 
 var map = {
-	c_cpp: 'c'
+	'c_cpp': 'c'
 };
 
 module.exports = {
@@ -37,14 +38,16 @@ module.exports = {
 					};
 					return '<div class="ace"><div class="aceCode" data-config=' + JSON.stringify(config) + '>' + escape(blk.body.trim()) + '<br></div></div>';
 				} else {
-					var body = blk.body.trim();
-
+					var content;
 					var lang = blk.kwargs.lang;
-					lang = map[lang] || lang.toLowerCase();
+					lang = map[lang] || lang;
 
-					var content = highlight.highlight(lang, body).value;
-					content = '<div class="aceCode">' + content + '</div>';
-					return content;
+					if (hljs.getLanguage(lang))
+						content = hljs.highlight(lang, blk.body.trim()).value;
+					else
+						content = blk.body.trim();
+
+					return '<pre><code class="hljs lang-' + lang + '">' + content + '</code></pre>';
 				}
 			}
 		}
