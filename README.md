@@ -7,6 +7,9 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 
 ## Changelog
 
+* 0.3 Releases:
+    * **0.3.0**: (Requires gitbook 3.0 or up) Improved support for gitbook 3.0+.
+
 * 0.2 Releases:
     * **0.2.1**: Default to 'c_cpp' for pdf syntax highlight if language is not specified.
     * **0.2.0**: Added experimental support for pdf syntax highlight, please open issues for languages that are not working for you.
