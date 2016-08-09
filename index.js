@@ -83,10 +83,8 @@ module.exports = {
 					newBody = '<div class="ace"><div class="aceCode" data-config=' + JSON.stringify(config) + '>' + escape(body) + '<br></div></div>';
 				} else {
 					config.lang = map[config.lang] || config.lang;
-					if (hljs.getLanguage(lang)) {
-						body = hljs.highlight(lang.body.trim()).value;
-					} else {
-						body = body.trim();
+					if (hljs.getLanguage(config.lang)) {
+						body = hljs.highlightAuto(body, [config.lang]).value;
 					}
 					newBody = '<pre><code class="hljs lang-' + config.lang + '">' + body + '</code></pre>';
 				}
