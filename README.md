@@ -8,16 +8,20 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.3 Releases:
+    * **0.3.1**: Updated regular expression to better detect {%ace%} tags.
     * **0.3.0**: (Requires gitbook 3.0 or up) Improved support for gitbook 3.0+.
+
 
 * 0.2 Releases:
     * **0.2.1**: Default to 'c_cpp' for pdf syntax highlight if language is not specified.
     * **0.2.0**: Added experimental support for pdf syntax highlight, please open issues for languages that are not working for you.
 
+
 * 0.1 Releases:
     * **0.1.2**: Removed dark theme logic, fix theme error.
     * **0.1.1**: Added custom theme parameter.
     * **0.1.0**: Updated to latest version of ace (added Swift and JSX syntax support).
+
 
 * 0.0 Releases:
     * **0.0.5**: Include pull requests from github, fixing scrolling.

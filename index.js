@@ -41,11 +41,11 @@ module.exports = {
 	hooks: {
 		'page:before': function (page) {
 			var self = this;
-			var blocks = page.content.match(/{%ace[\s\S]+?%}[\s\S]+?{%endace%}/mg);
+			var blocks = page.content.match(/{%ace[\s\S]*?%}[\s\S]*?{%endace%}/mg);
 			blocks && blocks.forEach(function (block) {
 				var newBody = block;
-				var header = block.replace(/{%ace[\s\S]+?%}/mg, '$&');
-				var body = block.replace(/{%ace[\s\S]+?%}([\s\S]+?){%endace%}/mg, '$1').trim();
+				var header = block.replace(/{%ace[\s\S]*?%}/mg, '$&');
+				var body = block.replace(/{%ace[\s\S]*?%}([\s\S]*?){%endace%}/mg, '$1').trim();
 				var config = {
 					edit: getParams(header, 'edit') || false,
 					lang: getParams(header, 'lang') || 'c_cpp',
