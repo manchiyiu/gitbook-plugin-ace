@@ -53,7 +53,7 @@ module.exports = {
 					theme: getParams(header, 'theme') || false,
 				};
 				if (self.output.name === 'website') {
-					newBody = '<div class="ace"><div class="aceCode" data-config=' + JSON.stringify(config) + '>' + escape(body) + '<br></div></div>';
+					newBody = '<div class="ace"><div class="aceCode" data-config=' + JSON.stringify(config) + '>{%raw%}' + escape(body) + '{%endraw%}<br></div></div>';
 				} else {
 					config.lang = map[config.lang] || config.lang;
 					if (hljs.getLanguage(config.lang)) {

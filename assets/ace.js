@@ -6,7 +6,6 @@ require(["gitbook", "jquery"], function (gitbook, $) {
     $('.ace').each(function () {
       var $ace = $(this).children('.aceCode');
       var config = $ace.data('config');
-
       var id = 'ace' + (aceCount++);
       $ace.attr('id', id);
 
