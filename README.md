@@ -8,6 +8,7 @@ See the plugin at work [here](http://ymcatar.gitbooks.io/gitbook-test/content/te
 ## Changelog
 
 * 0.3 Releases:
+    * **0.3.3**: Update to ace version 1.2.6
     * **0.3.2**: Fixed issue with code like `{{something}}` (angular expression)
     * **0.3.1**: Updated regular expression to better detect {%ace%} tags.
     * **0.3.0**: (Requires gitbook 3.0 or up) Improved support for gitbook 3.0+.
